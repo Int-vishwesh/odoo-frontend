@@ -28,7 +28,7 @@ export default function Home() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ 
-          email: username, // or username depending on your backend
+          email: username,
           password, 
           role 
         })
@@ -38,7 +38,6 @@ export default function Home() {
       
       if (data.success) {
         alert(`Login successful as ${role}!`);
-        // Redirect based on role
         if (role === 'admin') {
           window.location.href = '/admin/dashboard';
         } else {
@@ -59,7 +58,6 @@ export default function Home() {
         <div className="w-full flex justify-center items-center gap-30 mt-20">
           <div className="w-[800px] flex flex-col items-center gap-4 -mr-30">
             
-            {/* Role Selection Tabs */}
             <div className="flex bg-gray-200 rounded-lg p-1 mb-6">
               <button
                 type="button"
@@ -91,7 +89,6 @@ export default function Home() {
                 Login as {role === 'end-user' ? 'End User' : 'Admin'}
               </p>
               
-              {/* Role indicator */}
               <div className="flex items-center gap-2 text-sm text-gray-600">
                 <span className={`w-3 h-3 rounded-full ${role === 'admin' ? 'bg-red-500' : 'bg-green-500'}`}></span>
                 <span>{role === 'admin' ? 'Administrator Access' : 'User Access'}</span>
