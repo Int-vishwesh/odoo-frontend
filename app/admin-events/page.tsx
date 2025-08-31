@@ -196,7 +196,7 @@ export default function AdminEvents() {
             </div>
             
             <Link 
-              href="/admin/add-event"
+              href="/admin-events/add-event"
               className="px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
             >
               + Add New Event

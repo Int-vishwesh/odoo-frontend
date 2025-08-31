@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 export default function Navbar() {
   const pathname = usePathname();
-  const showHomeOnly = pathname === '/' || pathname === '/signup';
+  const showHomeOnly = pathname === '/' || pathname === '/signup' || pathname === '/admin-events' || pathname === '/admin-events/add-event';
   
   // State for notification count
   const [notificationCount, setNotificationCount] = useState(3);

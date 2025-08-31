@@ -46,7 +46,7 @@ export default function Home() {
         
         // Redirect based on user role from server response
         if (data.user.role === 'admin') {
-          router.push('/admin/events');
+          router.push('/admin-events');
         } else {
           router.push('/homepage');
         }

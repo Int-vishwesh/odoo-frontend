@@ -339,11 +339,11 @@ const getDemoEvent = (): Event => {
           <div>
             <h2 className="font-semibold text-gray-800 mb-2">Organizer</h2>
             <p className="text-gray-600">
-              {event.organizer.name} <br />
-              📞 {event.organizer.phone} <br />
-              ✉️ <a href={`mailto:${event.organizer.email}`} className="text-blue-600 hover:underline">
-                {event.organizer.email}
-              </a>
+              {event.organizer?.name || 'Not available'}<br />
+              📞 {event.organizer?.phone || 'not available'} <br />
+              ✉️ <a href={`mailto:${event.organizer?.email || ''}`} className="text-blue-600 hover:underline">
+  {event.organizer?.email || 'Not available'}
+</a>
             </p>
           </div>
           
