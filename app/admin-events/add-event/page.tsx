@@ -93,7 +93,7 @@ export default function AddEvent() {
 
       if (response.ok) {
         alert('Event created successfully!');
-        router.push('/admin/events'); // Redirect to admin events list
+        router.push('/admin-events'); // Redirect to admin events list
       } else {
         alert(result.error || 'Failed to create event');
       }
